@@ -6,6 +6,7 @@ class ExchangeRateTableGenerator {
         $this->exchangeRates = $exchangeRates;
     }
 
+    // generator tablicy z kursami
     public function generateTable() {
         echo "<table class='table table-striped table-bordered' id='exchangeRate' name='exchangeRate'>";
         echo "<thead><tr><th>Code</th><th>Name</th><th>Rate</th></tr></thead>";

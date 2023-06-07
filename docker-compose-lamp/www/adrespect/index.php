@@ -85,6 +85,7 @@ include 'Class/NBPApi.php';
     <div class="exchangeRates" style="width: 50%;">
     <h1>Exchange Rates</h1>
 <?php
+        // klasa generujaca tabele 
         $tableGenerator->generateTable();
 ?>
     </div>
