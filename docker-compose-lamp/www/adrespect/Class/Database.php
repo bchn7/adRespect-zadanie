@@ -14,6 +14,7 @@ class Database
         $this->dbName = DB_NAME;
         $this->username = DB_USR;
         $this->password = DB_PSWD;
+        
     }
 
     public function connect() {
