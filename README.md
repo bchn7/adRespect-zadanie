@@ -13,4 +13,7 @@ localhost/adrespect/
 
 w plikach .sql w głownym katalogu sa dostepne inserty do bazy
 
-
+aplikacja jest dostepna pod linkiem
+``
+https://adrespect.000webhostapp.com/
+``
