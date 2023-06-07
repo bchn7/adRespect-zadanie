@@ -1,4 +1,5 @@
 <?php
+include './config/dbconfig.php';
 class Database  
 {
     private $host;
@@ -7,12 +8,12 @@ class Database
     private $password;
     private $pdo;
 
-    public function __construct($host, $dbName, $username, $password){
+    public function __construct(){
         
-        $this->host = $host;
-        $this->dbName = $dbName;
-        $this->username = $username;
-        $this->password = $password;
+        $this->host = HOST;
+        $this->dbName = DB_NAME;
+        $this->username = DB_USR;
+        $this->password = DB_PSWD;
     }
 
     public function connect() {

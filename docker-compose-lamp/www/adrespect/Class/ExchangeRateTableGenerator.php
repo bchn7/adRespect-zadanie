@@ -7,7 +7,7 @@ class ExchangeRateTableGenerator {
     }
 
     public function generateTable() {
-        echo '<table>';
+        echo "<table class='table table-striped table-bordered'>";
         echo '<tr><th>Code</th><th>Name</th><th>Rate</th></tr>';
 
         foreach ($this->exchangeRates as $rate) {
