@@ -3,6 +3,7 @@
 class ExchangeManager  
 {
     private $db;
+    private $date;
     
     public function __construct($db){
         $this->db = $db;
@@ -30,7 +31,7 @@ class ExchangeManager
 
     public function getExchangeRates() {
         $pdo = $this->db->getPDO();
-        $select = $pdo->query("SELECT * FROM exchange_rates");
+        $select = $pdo->query("SELECT * FROM exchange_rates WHERE updatedate = '".date('Y-m-d')."'");
         return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 

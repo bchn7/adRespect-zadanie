@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database:3306
--- Generation Time: Cze 07, 2023 at 10:56 AM
--- Wersja serwera: 10.6.13-MariaDB-1:10.6.13+maria~ubu2004
--- Wersja PHP: 8.1.19
+-- Generation Time: Jun 07, 2023 at 08:49 PM
+-- Server version: 8.0.33
+-- PHP Version: 8.1.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,24 +24,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `currency_conversions`
+-- Table structure for table `currency_conversions`
 --
 
 CREATE TABLE `currency_conversions` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `amount` decimal(10,2) NOT NULL,
-  `source_currency` varchar(255) NOT NULL,
-  `target_currency` varchar(255) NOT NULL,
+  `source_currency` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `target_currency` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `converted_amount` decimal(10,2) NOT NULL,
-  `cunversion_date` date NOT NULL
+  `conversion_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indeksy dla zrzutów tabel
+-- Dumping data for table `currency_conversions`
+--
+
+INSERT INTO `currency_conversions` (`id`, `amount`, `source_currency`, `target_currency`, `converted_amount`, `conversion_date`) VALUES
+(43, 132.00, 'HKD', 'EUR', 1115.77, '2023-06-07 00:00:00'),
+(44, 423.00, 'CLP', 'IDR', 0.00, '2023-06-07 00:00:00'),
+(45, 2233.00, 'HUF', 'NZD', 569415.00, '2023-06-07 08:15:09'),
+(46, 123.00, 'USD', 'AUD', 82.20, '2023-06-07 08:15:17');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `currency_conversions`
+-- Indexes for table `currency_conversions`
 --
 ALTER TABLE `currency_conversions`
   ADD PRIMARY KEY (`id`);
@@ -54,7 +64,7 @@ ALTER TABLE `currency_conversions`
 -- AUTO_INCREMENT for table `currency_conversions`
 --
 ALTER TABLE `currency_conversions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
