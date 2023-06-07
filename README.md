@@ -1,5 +1,10 @@
 # Ad Respect zadanie rekruatacyjne
 
+pliki aplikacji znajduja sie w folderze 
+``
+docker-compose-lamp/www/
+``
+
 po sklonowaniu gita wchodzimy w folder docker-compose-lamp
 wykonujemy w nim
 ``
